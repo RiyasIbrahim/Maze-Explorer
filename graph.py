@@ -38,9 +38,10 @@ def build_graph():
   graph.add_vertex(entrance)
   graph.add_vertex(ante_chamber)
   graph.add_vertex(kings_room)
-  
-  # ADD EDGES BETWEEN ROOMS BELOW...
 
+  # ADD EDGES BETWEEN ROOMS BELOW...
+  graph.add_edge(entrance, ante_chamber, 7)
+  graph.add_edge(entrance, kings_room, 3)
 
   # DON'T CHANGE THIS CODE
   graph.print_map()
