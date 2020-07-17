@@ -33,15 +33,24 @@ def build_graph():
   entrance = Vertex("entrance")
   ante_chamber = Vertex("ante-chamber")
   kings_room = Vertex("king's room")
+  grand_gallery = Vertex("grand gallery")
+  treasure_room = Vertex("treasure room")
 
   # ADD ROOMS TO GRAPH BELOW...
   graph.add_vertex(entrance)
   graph.add_vertex(ante_chamber)
   graph.add_vertex(kings_room)
+  graph.add_vertex(grand_gallery)
+  graph.add_vertex(treasure_room)
 
   # ADD EDGES BETWEEN ROOMS BELOW...
   graph.add_edge(entrance, ante_chamber, 7)
   graph.add_edge(entrance, kings_room, 3)
+  graph.add_edge(entrance, ante_chamber, 1)
+  graph.add_edge(ante_chamber, grand_gallery, 2)
+  graph.add_edge(kings_room, grand_gallery, 2)
+  graph.add_edge(ante_chamber, treasure_room, 6)
+  graph.add_edge(grand_gallery, treasure_room, 4)
 
   # DON'T CHANGE THIS CODE
   graph.print_map()
