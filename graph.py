@@ -31,11 +31,14 @@ def build_graph():
 
   # MAKE ROOMS INTO VERTICES BELOW...
   entrance = Vertex("entrance")
-
+  ante_chamber = Vertex("ante-chamber")
+  kings_room = Vertex("king's room")
 
   # ADD ROOMS TO GRAPH BELOW...
   graph.add_vertex(entrance)
-
+  graph.add_vertex(ante_chamber)
+  graph.add_vertex(kings_room)
+  
   # ADD EDGES BETWEEN ROOMS BELOW...
 
 
